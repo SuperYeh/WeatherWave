@@ -162,6 +162,11 @@ function   request(paramName) {
 		
 				}
 			}
+
+                        var paralng = request("lng");
+                        var paralat = request("lat");
+                        if(paralng) mclng = paralng;
+                        if(paralat) mclat = paralat;
 			
 			canvas = document.getElementById("map_canvas");
 			//canvas.width = 400;
