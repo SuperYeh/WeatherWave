@@ -35,13 +35,6 @@ body {height:auto; margin:0; padding: 0;}
 						<input name="key_isGPS" id="key_isGPS" value="1" checked="checked" type="checkbox">
 						<label for="key_isGPS">GPS</label>
 					</fieldset>
-				</div>	
-				<div data-role="collapsible" data-collapsed="true">
-					<h3>显示设定</h3>
-					<fieldset data-role="controlgroup" data-mini="true">
-						<label for="key_face_invert">反白显示</label>	
-			 			<input name="key_face_invert" id="key_face_invert" value="1" checked="checked" type="checkbox">
-					</fieldset>
 				</div>
 			</div>
 
@@ -78,9 +71,7 @@ body {height:auto; margin:0; padding: 0;}
 		    var options = {
 				'key_loc_lng': mclng,
 				'key_loc_lat': mclat,  
-				'key_isGPS': Number( $("input[name=key_isGPS]").val() ),
-				
-				'key_face_invert': Number( $("input[name=key_face_invert]").val() ),
+				'key_isGPS': Number( $("input[name=key_isGPS]").val(),
 			}
 			return options;
 		}
@@ -116,12 +107,7 @@ body {height:auto; margin:0; padding: 0;}
 						$("input[name=key_isGPS]").val("0");
 						isGPS = false;
 					}
-					
-					if(ls_pto["key_face_invert"] == 0) {
-						$("input[name=key_face_invert]").prop('checked', false);
-						$("input[name=key_face_invert]").checkboxradio('refresh');
-						$("input[name=key_face_invert]").val("0");
-					}
+		
 				}
 			}
 			
