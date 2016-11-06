@@ -149,14 +149,14 @@ function   request(paramName) {
 					[3.09191371068437e-9, 0.000008983055096812155, 0.00006995724062, 23.10934304144901, -0.00023663490511, -0.6321817810242, -0.00663494467273, 0.03430082397953, -0.00466043876332, 2555164.4], 
 					[2.890871144776878e-9, 0.000008983055095805407, -3.068298e-8, 7.47137025468032, -0.00000353937994, -0.02145144861037, -0.00001234426596, 0.00010322952773, -0.00000323890364, 826088.5]]; 
 
-	var y = Math.abs(mclat);
-	var x = Math.abs(mclon);
-	var F;
-    for (var i = 0; i < 6; i++) {
-        if (y > range[i]) {
+			var y = Math.abs(mclat);
+			var x = Math.abs(mclon);
+			var F;
+ 		   for (var i = 0; i < 6; i++) {
+  		      if (y > range[i]) {
 			F = modifact[i];
 			break;
-		}
+				}
 	}
 	var s = y / F[9];
 	var lon = F[0] + F[1] * x;
@@ -164,7 +164,7 @@ function   request(paramName) {
 	lon *= ((mclon< 0)? -1 : 1);
 	lat *= ((mclat< 0)? -1 : 1);
 	
-	return {lon:lon, lat:lat};
+			return {lon:lon, lat:lat};
 }
 	
 //convert to sogou geo system
